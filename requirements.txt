@@ -19,3 +19,4 @@ urllib3==2.2.3
 Werkzeug==3.0.4
 yagmail==0.15.293
 zipp==3.20.2
+python-dotenv==1.0.1
