@@ -2,9 +2,13 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 import os
 import yagmail
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = os.getenv("SECRET_KEY")
+
 
 # Folder to save uploaded PDFs
 UPLOAD_FOLDER = 'uploads'
